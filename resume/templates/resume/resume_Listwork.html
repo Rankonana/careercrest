@@ -1,0 +1,35 @@
+{% extends 'base-resume-create.html' %}
+{% block title %}Work History{% endblock %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+    <h2>Work History</h2>
+
+    {% for obj in works %}
+        {{obj.id}}--{{ obj.job_title }}, {{ obj.employer }},{{ obj.start_date }}
+       <a href="{% url 'addeditwork' tracking obj.worktracking  %}"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+       <a href="{% url 'deletework' tracking obj.worktracking  %}" style='color:red'><i class='fa fa-trash-o' ></i> delete</a>
+    
+       <hr>
+    {% endfor %}
+    
+    <a href="{% url 'addeditwork' tracking newone  %}" class="btn btn-outline-primary"> + Add new one</a>
+    
+
+    <div class="btn-group-footer">
+
+        <a href="{% url 'list-edu' tracking %}" class="btn btn-default btn-next js-back-button"> Next</a>
+        <a href="{% url 'create-basic' tracking %}" class="btn btn-primary  btn-back js-next-button"> Back</a>
+
+
+    </div>
+
+
+</div>    
+
+{% endblock content %}
+
+
+
+

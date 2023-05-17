@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 from django.contrib.sitemaps.views import sitemap
 from . sitemaps import JobSitemap,StaticSitemap
@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 
 sitemaps = {
 		"jobs": JobSitemap,
-        'static': StaticSitemap,
+        'static': StaticSitemap
 }
 
 urlpatterns = [
@@ -32,6 +32,11 @@ urlpatterns = [
     path('xxx/<int:page>/',views.xxx,name="xxx"),
     path("terms.json",views.listing_api,name="terms-api"),
     path('loadmore/',views.loadmore,name="loadmore"),
+
+
+
+
+
 ]
 
 #Before calling static

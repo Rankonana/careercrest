@@ -1,10 +1,11 @@
-from django.shortcuts import render , get_object_or_404
+from django.shortcuts import render , get_object_or_404, redirect
 from django.http import Http404
 from .models import Job,JobCategories,JobTypes
 from django.db.models import Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import HttpResponse
 from django.http import JsonResponse
+from django.views.generic import ListView, DetailView
 
 
 def listing_api(request):
@@ -49,7 +50,7 @@ def listing_api(request):
         "id": jb.id,
         "description": jb.description,
         "location": jb.location,
-        "salary": jb.salary[:50],
+        "salary": jb.salary,
         "remotePosition": jb.remotePosition,
         "jobType": str(jb.jobType),
         "jobCategory": str(jb.jobCategory),
@@ -173,3 +174,4 @@ def xxx(request, page):
     return render(request, "base/xxx.html", context)
 def loadmore(request):
     return render(request,'base/loadmore.html')
+

@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJXVJ9QG2Q"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJXVJ9QG2Q"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-ZJXVJ9QG2Q');
-</script>
+</script> -->
     <meta charset="utf-8">
     <title>CareerCrest - {% block title %}Jobs{% endblock %}</title>
 
@@ -107,7 +107,6 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
                     <a href="{% url 'home' %}" class="nav-item nav-link">Home</a>
-                    <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Jobs</a>
                         <div class="dropdown-menu rounded-0 m-0">
@@ -115,6 +114,9 @@
 
                         </div>
                     </div>
+                    <a href="/blog/" class="nav-item nav-link">Blog</a>                   
+                    <a href="/resume/" class="nav-item nav-link">Resume</a>                   
+
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About us</a>
                         <div class="dropdown-menu rounded-0 m-0">
@@ -207,7 +209,7 @@
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style=""><i class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" ><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -221,8 +223,8 @@
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js'%}" ></script>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4323271819190092"
-     crossorigin="anonymous"></script>
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4323271819190092"
+     crossorigin="anonymous"></script> -->
 
 
 </body></html>

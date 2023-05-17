@@ -27,3 +27,4 @@ class JobSitemap(Sitemap):
 		
 		def location(self,obj):
 			return '/job/%s' % (str(obj.id) +"/" + obj.title.replace(" ", "-").lower().replace("/", "-").replace("\\", "-"))
+
